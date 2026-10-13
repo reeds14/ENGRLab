@@ -1,0 +1,57 @@
+# By submitting this assignment, I agree to the following:
+# "Aggies do not lie, cheat, or steal, or tolerate those who do."
+# "I have not given or received any unauthorized aid on this assignment."
+#
+# Names:        Reed Scott (UIN: 838002005)
+#               Sho Hiroi (UIN: 837008392)
+#               Xavier Gomez (UIN: 538001968)
+#               Izaac Almeida (UIN: 238008017)
+# Section:      553
+# Assignment:   Lab 6A
+# Date:         12 October 2026
+
+# Test cases:
+# 1. f(x) = x**3 - 6x**2 + 11x-6, x1=1.5 x2=2.5
+#  Expected root: 2
+# 2. f(x) = x**3 - 4, x1=1, x2=2
+#   Expected root: ~1.58
+# 3. f(x)= x**3 + x - 2, x1=0, x2=2
+#   Expected root: 1
+# 4. f(x)= x**3 - 2x**2 - 5x + 6, x1=2.5, x2=3.5
+#  Expected root: 3
+
+# Get coeffeicents from the user
+A= float(input("Enter coefficient A: "))
+B= float(input("Enter coefficient B: "))
+C= float(input("Enter coefficient C: "))
+D= float(input("Enter coefficient D: "))
+
+# Get the bounds sourronding one root 
+x1= float(input("Enter lower bound x1: "))
+x2= float(input("Enter upper bound x2: "))
+
+# Define the cubic polynomial
+def f(x):
+    return A*x**3+B*x**2+C*x+D
+
+# Start iteration counter
+iterations = 0
+
+# Bisection Method
+while True: 
+    p = (x1+x2) / 2
+    fp=f(p)
+    iterations = iterations + 1
+
+    if abs(fp) < 1e-6:
+        break
+
+    if f(x1) * fp < 0:
+        x2 = p
+
+    else:
+        x1 = p 
+
+# Print the root and number of iterations
+print(p)
+print(iterations)
