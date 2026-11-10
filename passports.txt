@@ -1,0 +1,8 @@
+pid:087387168 hgt:179cm cid:813 iyr:2010
+byr:1972 eyr:2028 ecl:oth hcl:#fv107y
+
+byr:2014
+eyr:2033 iyr:2019 hgt:76in cid:239 hcl:#60d158 pid:629098090 ecl:hzl
+
+cid:181 eyr:2027 hgt:71in
+hcl:#a6e570 pid:166260202 iyr:2016 byr:1918
